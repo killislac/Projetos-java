@@ -89,3 +89,72 @@ public class Main {
     }
 }
 ```
+
+---------------------------------------------------------------------------------------------------------------------------
+
+# DEFINIÇÕES:
+1. Atributos:
+Atributos são variáveis declaradas dentro de uma classe. Eles representam o estado ou as características de um objeto daquela classe. Atributos armazenam dados que são específicos para cada instância da classe.
+
+```java
+public class Carro {
+    // Atributos
+    private String cor;
+    private String modelo;
+    private int ano;
+
+}
+
+```
+### Uso:
+```java
+Carro meuCarro = new Carro();
+meuCarro.cor = "Vermelho";  // Definindo o atributo 'cor'
+```
+2. Métodos:
+Métodos são blocos de código que executam uma tarefa específica. Eles definem o comportamento dos objetos da classe e podem operar sobre os atributos da classe. 
+```java
+ // Método para exibir informações do carro
+    public void exibirInformacoes() {
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Cor: " + cor);
+        System.out.println("Ano: " + ano);
+    }
+
+    // Método para definir a cor do carro
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+```
+### Uso:
+```java
+Carro meuCarro = new Carro();
+meuCarro.setCor("Azul");  // Chamando o método 'setCor'
+meuCarro.exibirInformacoes();  // Chamando o método 'exibirInformacoes'
+```
+
+3. Instâncias:
+Instâncias são objetos criados a partir de uma classe. Cada instância é uma cópia separada da classe, com seus próprios valores para os atributos. Instâncias são criadas usando o operador new e um construtor da classe.
+
+```java
+Carro meuCarro = new Carro("Azul", "Fusca", 1965);
+
+```
+4. Construtores: 
+Construtores são métodos especiais em uma classe que são chamados automaticamente quando uma nova instância da classe é criada. O principal objetivo de um construtor é inicializar os atributos da nova instância da classe com valores iniciais e configurar a instância de acordo com os requisitos.
+
+```java
+   // Construtor padrão
+    public Pessoa() {
+        // Inicialização padrão, se necessário
+        this.nome = "Desconhecido";
+        this.idade = 0;
+    }
+
+
+      // Construtor com parâmetros
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+```
