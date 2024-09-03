@@ -2,7 +2,8 @@ package Colecoes;
 
 import java.util.Objects;
 
-public class Usuario {
+public class
+Usuario {
     String nome;
  Usuario(String nome){
      this.nome = nome;
