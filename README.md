@@ -190,3 +190,24 @@ Construtores são métodos especiais em uma classe que são chamados automaticam
 **Propósito:** Remove e retorna o proximo elemento no início da fila.
 **Retorno:** Retorna null se a fila estiver vazia (ao contrário de remove(), que lança uma exceção se a fila estiver vazia).
 **Uso Ideal:** Usado quando você deseja remover o elemento do início da fila e não se importa se a fila estiver vazia.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+# Usos Comuns de this
+**Distinguir entre Variáveis de Instância e Parâmetros:**
+
+Quando os nomes dos parâmetros do método ou construtor são iguais aos nomes dos atributos da classe, você usa ```this``` para se referir ao atributo da classe e não ao parâmetro.
+
+```java 
+public class Aluno {
+    String nome;
+
+    // Construtor da classe Aluno
+    Aluno(String nome) {
+        this.nome = nome; // 'this' refere-se ao atributo da classe
+    }
+}
+
+```

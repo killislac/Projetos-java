@@ -158,3 +158,56 @@ Construtores são métodos especiais em uma classe que são chamados automaticam
         this.idade = idade;
     }
 ```
+---------------------------------------------------------------------------------------------------------------------------
+
+# Método offer()
+
+* **Propósito:** Adiciona o elemento à fila.
+* **Retorno:** Retorna true se o elemento foi adicionado com sucesso, ou false se a fila não conseguiu acomodar o elemento (em algumas implementações que têm capacidade limitada).
+* **Uso Ideal:** Preferível quando você está lidando com filas que podem ter capacidade limitada ou quando você deseja verificar se a adição foi bem-sucedida.
+
+# Método Add()
+* **Propósito:** Também adiciona o elemento à fila.
+* **Retorno:** Retorna true se o elemento foi adicionado com sucesso. Se a fila tiver uma capacidade limitada e não puder acomodar o elemento, o método lança uma exceção (IllegalStateException).
+* **Uso Ideal:** Usado quando você está certo de que a fila pode acomodar o elemento ou quando você deseja lidar com exceções se a adição falhar.
+---------------------------------------------------------------------------------------------------------------------------
+# Método Peek() e Element()
+
+### peek():
+
+**Propósito:** Retorna o elemento no início da fila sem removê-lo.
+**Retorno:** Retorna null se a fila estiver vazia (dependendo da implementação específica da fila, como LinkedList).
+**Uso Ideal:** Usado quando você deseja visualizar o próximo elemento da fila sem removê-lo e você está ciente de que a fila pode estar vazia.
+
+### Element():
+
+**Propósito:** Retorna o elemento no início da fila sem removê-lo.
+**Retorno:** Lança uma exceção (NoSuchElementException) se a fila estiver vazia.
+**Uso Ideal:** Usado quando você deseja garantir que a fila não esteja vazia antes de acessar o primeiro elemento, e está preparado para lidar com a exceção se a fila estiver vazia.
+
+### poll():
+
+**Propósito:** Remove e retorna o proximo elemento no início da fila.
+**Retorno:** Retorna null se a fila estiver vazia (ao contrário de remove(), que lança uma exceção se a fila estiver vazia).
+**Uso Ideal:** Usado quando você deseja remover o elemento do início da fila e não se importa se a fila estiver vazia.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+# Usos Comuns de this
+**Distinguir entre Variáveis de Instância e Parâmetros:**
+
+Quando os nomes dos parâmetros do método ou construtor são iguais aos nomes dos atributos da classe, você usa ```this``` para se referir ao atributo da classe e não ao parâmetro.
+
+```java 
+public class Aluno {
+    String nome;
+
+    // Construtor da classe Aluno
+    Aluno(String nome) {
+        this.nome = nome; // 'this' refere-se ao atributo da classe
+    }
+}
+
+```
