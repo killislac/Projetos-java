@@ -16,6 +16,7 @@ public class Foreach {
         aprovados.forEach(nome -> {System.out.println(nome + "!!!");});
 
         System.out.println("\nMethod Reference #1");
+        // A sintaxe System.out::println significa "para cada elemento da coleção, chame o método println de System.out passando esse elemento como argumento."
         aprovados.forEach(System.out::println);
 
         System.out.println("------------------------------------------------------------------");
